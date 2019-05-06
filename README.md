@@ -1,4 +1,4 @@
-#COM 232 - Usando a API.Planets da NASA em bancos relacionais
+# COM 232 - Usando a API.Planets da NASA em bancos relacionais
 
 A aplicação (front-end) foi realizada utilizando React + Bootstrap 4 e a comunicação com a API é feita por meio do PHP7. Para rodar a aplicação no seu computador basta executar os comandos abaixo:
 
@@ -12,7 +12,7 @@ A aplicação (front-end) foi realizada utilizando React + Bootstrap 4 e a comun
 
 *  Importante!! **Obs:** Caso não possua o 'yarn' use o 'npm' como gerenciador de pacotes; o projeto será aberto de qualquer forma no http://localhost:3000/
 
-####Planets.API　
+#### Planets.API　
 
 ```javascript
 function aguarde(){
