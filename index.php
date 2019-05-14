@@ -26,19 +26,29 @@
             <a class="nav-link" href="/">Sobre</a>
         </li>
         <li class="nav-item">
-            <a class="nav-link text-danger" href="#">Aluno</a>
+            <a class="nav-link text-danger" href="/src/model/aluno/listarDiscente.php">
+              Aluno
+            </a>
         </li>
         <li class="nav-item">
-            <a class="nav-link text-danger" href="#">Professor</a>
+            <a class="nav-link text-danger" href="/src/model/professor/listarDoscente.php">
+              Professor
+            </a>
         </li>
         <li class="nav-item">
-            <a class="nav-link text-danger" href="#">Prova</a>
+            <a class="nav-link text-danger" href="/src/model/prova/listarProvas.php">
+              Prova
+            </a>
         </li>
         <li class="nav-item">
-            <a class="nav-link text-danger" href="#">Questão</a>
+            <a class="nav-link text-danger" href="/src/model/questao/listarQuestoes.php">
+              Questão
+            </a>
         </li>
         <li class="nav-item">
-            <a class="nav-link text-danger" href="#">Turma</a>
+            <a class="nav-link text-danger" href="/src/model/turma/listarTurmas.php">
+              Turma
+            </a>
         </li>
         <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="/" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
