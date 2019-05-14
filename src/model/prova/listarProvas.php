@@ -77,6 +77,38 @@
       <h1 class="d-flex justify-content-center align-items-center text-white">
           Listagem das Provas
       </h1>
+      <table class="table table-striped border-dark text-white bg-primary mt-5">
+        <thead>
+          <th>#</th>
+          <th>Turma</th>
+          <th>Professor</th>
+          <th>Data da prova</th>
+          <th>Valor</th>
+        </thead>
+        <tbody>
+          <tr>
+            <td>1</td>
+            <td>Sistemas de Informação</td>
+            <td>Cynthia</td>
+            <td>10/10/2019</td>
+            <td>100</td>
+          </tr>
+          <tr>
+            <td>2</td>
+            <td>Sistemas de Informação</td>
+            <td>Anderson</td>
+            <td>60</td>
+            <td>10/05/2019</td>
+          </tr>
+          <tr>
+            <td>3</td>
+            <td>Sistemas de Informação</td>
+            <td>Paula</td>
+            <td>60</td>
+            <td>23/11/2019</td>
+          </tr>    
+        </tbody>
+      </table>
     </div>
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
