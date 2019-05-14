@@ -77,6 +77,38 @@
       <h1 class="d-flex justify-content-center align-items-center text-white">
           Listagem das Turmas
       </h1>
+      <table class="table table-striped border-dark text-white text-center bg-primary mt-5">
+        <thead>
+          <th>#</th>
+          <th>Nome</th>
+          <th>Curso</th>
+          <th>Instituição</th>
+          <th>Professor</th>
+        </thead>
+        <tbody>
+          <tr>
+            <td>1</td>
+            <td>Comunicação e Expressão</td>
+            <td>Sistemas de Informação</td>
+            <td>UNIFEI</td>
+            <td>Cynthia</td>
+          </tr>
+          <tr>
+            <td>2</td>
+            <td>Algortimo e Estruturas de Dados I</td>
+            <td>Sistemas de Informação</td>
+            <td>UNIFEI</td>
+            <td>Paula</td>
+          </tr>
+          <tr>
+            <td>3</td>
+            <td>Cálculo I</td>
+            <td>Sistemas de Informação</td>
+            <td>UNIFEI</td>
+            <td>Anderson</td>
+          </tr>    
+        </tbody>
+      </table>
     </div>
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->

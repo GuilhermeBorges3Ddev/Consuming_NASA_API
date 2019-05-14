@@ -90,8 +90,8 @@
             <td>1</td>
             <td>Sistemas de Informação</td>
             <td>Cynthia</td>
-            <td>10/10/2019</td>
             <td>100</td>
+            <td>10/10/2019</td>
           </tr>
           <tr>
             <td>2</td>
