@@ -5,15 +5,17 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="/src/css/bootstrap.css">
+    <link rel="stylesheet" href="../../css/bootstrap.css">
     <!-- CSS Proprietário -->
-    <link rel="stylesheet" href="/src/css/style.css">
+    <link rel="stylesheet" href="../../css/style.css">
     <title>BD2 - NASA Planets</title>
   </head>
 
   <body>
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <a class="navbar-brand" href="/">Navbar</a>
+        <a class="navbar-brand" href="/">
+          <img src="../../assets/images/nasa-logo.jpg" alt="NASA Logo" height="50" width="70">
+        </a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#conteudoNavbarSuportado" aria-controls="conteudoNavbarSuportado" aria-expanded="false" aria-label="Alterna navegação">
           <span class="navbar-toggler-icon"></span>
         </button>
@@ -24,6 +26,31 @@
         </li>
         <li class="nav-item">
             <a class="nav-link" href="/">Sobre</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link text-danger" href="../aluno/listarDiscente.php">
+              Aluno
+            </a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link text-danger" href="./listarDoscente.php">
+              Professor
+            </a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link text-danger" href="../prova/listarProvas.php">
+              Prova
+            </a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link text-danger" href="../questao/listarQuestoes.php">
+              Questão
+            </a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link text-danger" href="../turma/listarTurmas.php">
+              Turma
+            </a>
         </li>
         <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="/" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -46,14 +73,39 @@
         </form>
     </div>
     </nav>
-    <h1 class="d-flex justify-content-center align-items-center text-white mt-5">
-        NASA Consumer Applicattion has his 'Home'... Welcome!
-    </h1>
-
+    <div class="container mt-5">
+      <h1 class="d-flex justify-content-center text-white">
+          Listagem de Professores
+      </h1>
+      <table class="table table-striped border-dark text-white bg-primary text-center mt-5">
+        <thead>
+          <th>#</th>
+          <th>Nome</th>
+          <th>E-mail</th>
+        </thead>
+        <tbody>
+          <tr>
+            <td>1</td>
+            <td>Dr. Anderson</td>
+            <td>anderson.mat001@m.com</td>
+          </tr>
+          <tr>
+            <td>2</td>       
+            <td>Dra. Cynthia</td>
+            <td>cynthiaLopes.bac002@m.com</td>
+          </tr>
+          <tr>
+            <td>3</td>
+            <td>Dra. Paula</td>
+            <td>paula_rocha.com111@m.com</td>
+          </tr>    
+        </tbody>
+      </table>
+    </div>
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="/src/js/jquery.js"></script>
-    <script src="/src/js/popper.js"></script>
-    <script src="/src/js/bootstrap.js"></script>
+    <script src="../../js/jquery.js"></script>
+    <script src="../../js/popper.js"></script>
+    <script src="../../js/bootstrap.js"></script>
   </body>
 </html>
