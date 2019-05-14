@@ -77,6 +77,34 @@
       <h1 class="d-flex justify-content-center align-items-center text-white">
           Listagem das Questões
       </h1>
+      <table class="table table-striped border-dark text-white text-center bg-primary mt-5">
+        <thead>
+          <th>#</th>
+          <th>Pergunta</th>
+          <th>Gabarito</th>
+          <th>Nível</th>
+        </thead>
+        <tbody>
+          <tr>
+            <td>1</td>
+            <td>O que é comunicação?</td>
+            <td>É o processo em que emissor e destinatário trocam dados.</td>
+            <td>1</td>
+          </tr>
+          <tr>
+            <td>2</td>
+            <td>O que é emissor?</td>
+            <td>É o ente que emite os dados à alguém.</td>
+            <td>1</td>
+          </tr>
+          <tr>
+            <td>3</td>
+            <td>O que é destinatário?</td>
+            <td>É o ente que receberá os dados de alguém.</td>
+            <td>1</td>
+          </tr>    
+        </tbody>
+      </table>
     </div>
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
