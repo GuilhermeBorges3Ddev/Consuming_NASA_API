@@ -74,10 +74,10 @@
     </div>
     </nav>
     <div class="container mt-5">
-      <h1 class="d-flex justify-content-center align-items-center text-white">
+      <h1 class="d-flex justify-content-center text-white">
           Listagem de Professores
       </h1>
-      <table class="table table-striped border-dark text-white bg-primary mt-5">
+      <table class="table table-striped border-dark text-white bg-primary text-center mt-5">
         <thead>
           <th>#</th>
           <th>Nome</th>

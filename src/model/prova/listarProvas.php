@@ -77,7 +77,7 @@
       <h1 class="d-flex justify-content-center align-items-center text-white">
           Listagem das Provas
       </h1>
-      <table class="table table-striped border-dark text-white bg-primary mt-5">
+      <table class="table table-striped border-dark text-white text-center bg-primary mt-5">
         <thead>
           <th>#</th>
           <th>Turma</th>
