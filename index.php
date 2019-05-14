@@ -25,6 +25,21 @@
         <li class="nav-item">
             <a class="nav-link" href="/">Sobre</a>
         </li>
+        <li class="nav-item">
+            <a class="nav-link text-danger" href="#">Aluno</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link text-danger" href="#">Professor</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link text-danger" href="#">Prova</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link text-danger" href="#">Questão</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link text-danger" href="#">Turma</a>
+        </li>
         <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="/" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
             Opções de Serviços
@@ -46,10 +61,11 @@
         </form>
     </div>
     </nav>
-    <h1 class="d-flex justify-content-center align-items-center text-white mt-5">
-        NASA Consumer Applicattion has his 'Home'... Welcome!
-    </h1>
-
+    <div class="container mt-5">
+      <h1 class="d-flex justify-content-center align-items-center text-white">
+          NASA Consumer Applicattion has his 'Home'... Welcome!
+      </h1>
+    </div>
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="/src/js/jquery.js"></script>
