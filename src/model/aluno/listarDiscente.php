@@ -77,6 +77,34 @@
       <h1 class="d-flex justify-content-center align-items-center text-white">
           Listagem de Alunos
       </h1>
+      <table class="table table-striped border-dark text-white bg-primary mt-5">
+        <thead>
+          <th>#</th>
+          <th>Código</th>
+          <th>Nome</th>
+          <th>E-mail</th>
+        </thead>
+        <tbody>
+          <tr>
+            <td>1</td>
+            <td>1000</td>
+            <td>Maria</td>
+            <td>m@m.com</td>
+          </tr>
+          <tr>
+            <td>2</td>
+            <td>2000</td>
+            <td>Carlos</td>
+            <td>c@m.com</td>
+          </tr>
+          <tr>
+            <td>3</td>
+            <td>3000</td>
+            <td>Julia</td>
+            <td>j@m.com</td>
+          </tr>    
+        </tbody>
+      </table>
     </div>
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
