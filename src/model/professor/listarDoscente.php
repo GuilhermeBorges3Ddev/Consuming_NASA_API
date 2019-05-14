@@ -77,6 +77,30 @@
       <h1 class="d-flex justify-content-center align-items-center text-white">
           Listagem de Professores
       </h1>
+      <table class="table table-striped border-dark text-white bg-primary mt-5">
+        <thead>
+          <th>#</th>
+          <th>Nome</th>
+          <th>E-mail</th>
+        </thead>
+        <tbody>
+          <tr>
+            <td>1</td>
+            <td>Dr. Anderson</td>
+            <td>anderson.mat001@m.com</td>
+          </tr>
+          <tr>
+            <td>2</td>       
+            <td>Dra. Cynthia</td>
+            <td>cynthiaLopes.bac002@m.com</td>
+          </tr>
+          <tr>
+            <td>3</td>
+            <td>Dra. Paula</td>
+            <td>paula_rocha.com111@m.com</td>
+          </tr>    
+        </tbody>
+      </table>
     </div>
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
