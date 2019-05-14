@@ -10,7 +10,7 @@ gulp.task('sass', gulp.series(function(){
 
 //Mantem assistindo as sobrescrições via 'gulp watch'
 gulp.task('watch', gulp.series(function(){
-    gulp.watch(['node_modules/bootstrap/scss/*.scss','src/scss/*.scss'],['sass']),
+    gulp.watch(['node_modules/bootstrap/scss/*.scss','src/scss/*.scss'],gulp.parallel(['sass'])),
     gulp.parallel(['sass']);
 }));
 
