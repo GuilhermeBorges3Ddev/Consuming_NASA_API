@@ -90,22 +90,22 @@
             <td>1</td>
             <td>Sistemas de Informação</td>
             <td>Cynthia</td>
-            <td>100</td>
             <td>10/10/2019</td>
+            <td>100</td>
           </tr>
           <tr>
             <td>2</td>
             <td>Sistemas de Informação</td>
             <td>Anderson</td>
-            <td>60</td>
             <td>10/05/2019</td>
+            <td>60</td>
           </tr>
           <tr>
             <td>3</td>
             <td>Sistemas de Informação</td>
             <td>Paula</td>
-            <td>60</td>
             <td>23/11/2019</td>
+            <td>60</td>
           </tr>    
         </tbody>
       </table>
