@@ -74,13 +74,14 @@
     </div>
     </nav>
     <div class="container mt-5">
+      <!-- 
+        ************************************************************************************ 
+        ************************************************************************************ 
+      -->
       <?php
         $conn= new PDO("pgsql:host=localhost;port=5432;dbname=bd_saap;user=postgres;password=root");
-        //Usamos o prepare para dizer ao DB o que esperar
         $stmt = $conn->prepare("SELECT * FROM tb_aluno");
-        //Mandando para o DB o nosso prepare()
         $stmt->execute();
-        //Fatiaremos de uma vez só as 'rows' da consulta
         while($line = $stmt->fetchAll(PDO::FETCH_ASSOC)){
           echo '<pre>';
           print_r($line);
@@ -88,6 +89,10 @@
         }
         $conn = null;
       ?>
+      <!-- 
+        ************************************************************************************ 
+        ************************************************************************************ 
+      -->
       <h1 class="d-flex justify-content-center align-items-center text-white">
           Listagem de Alunos
       </h1>
