@@ -77,28 +77,27 @@
       <h1 class="d-flex justify-content-center text-white">
           Listagem de Professores
       </h1>
-      <table class="table table-striped border-dark text-white bg-primary text-center mt-5">
+      <table class="table table-striped border-dark text-white text-center bg-primary mt-5">
         <thead>
           <th>#</th>
           <th>Nome</th>
           <th>E-mail</th>
         </thead>
         <tbody>
-          <tr>
-            <td>1</td>
-            <td>Dr. Anderson</td>
-            <td>anderson.mat001@m.com</td>
-          </tr>
-          <tr>
-            <td>2</td>       
-            <td>Dra. Cynthia</td>
-            <td>cynthiaLopes.bac002@m.com</td>
-          </tr>
-          <tr>
-            <td>3</td>
-            <td>Dra. Paula</td>
-            <td>paula_rocha.com111@m.com</td>
-          </tr>    
+          <?php
+            $conn= new PDO("pgsql:host=localhost;port=5432;dbname=bd_saap;user=postgres;password=root");
+            $stmt = $conn->prepare("SELECT * FROM tb_professor");
+            $stmt->execute();
+            $tableData = $stmt->fetchAll(PDO::FETCH_ASSOC);
+            foreach($tableData as $line){
+              echo'<tr>';
+                echo'<td>'. $line["id_professor"] .'</td>';
+                echo'<td>'. $line['nome_professor']. '</td>';
+                echo'<td>'. $line['email_professor'] .'</td>';
+              echo'<tr>';
+            }
+            $conn = null;
+          ?>    
         </tbody>
       </table>
     </div>
