@@ -74,19 +74,6 @@
     </div>
     </nav>
     <div class="container mt-5">
-      <!-- 
-        ************************************************************************************ 
-        ************************************************************************************ 
-      -->
-      <?php
-        $conn= new PDO("pgsql:host=localhost;port=5432;dbname=bd_saap;user=postgres;password=root");
-        $stmt = $conn->prepare("SELECT * FROM tb_aluno");
-        $stmt->execute();
-      ?>
-      <!-- 
-        ************************************************************************************ 
-        ************************************************************************************ 
-      -->
       <h1 class="d-flex justify-content-center align-items-center text-white">
           Listagem de Alunos
       </h1>
@@ -99,6 +86,9 @@
         </thead>
         <tbody>
           <?php
+            $conn= new PDO("pgsql:host=localhost;port=5432;dbname=bd_saap;user=postgres;password=root");
+            $stmt = $conn->prepare("SELECT * FROM tb_aluno");
+            $stmt->execute();
             $tableData = $stmt->fetchAll(PDO::FETCH_ASSOC);
             foreach($tableData as $line){
               echo'<tr>';
