@@ -74,7 +74,7 @@
     </div>
     </nav>
     <div class="container mt-5">
-      <h1 class="d-flex justify-content-center align-items-center text-white">
+      <h1 class="d-flex justify-content-center align-items-center text-primary">
           NASA Consumer Applicattion has his 'Home'... Welcome!
       </h1>
     </div>

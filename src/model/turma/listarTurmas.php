@@ -74,39 +74,34 @@
     </div>
     </nav>
     <div class="container mt-5">
-      <h1 class="d-flex justify-content-center align-items-center text-white">
+      <h1 class="d-flex justify-content-center align-items-center text-primary">
           Listagem das Turmas
       </h1>
       <table class="table table-striped border-dark text-white text-center bg-primary mt-5">
         <thead>
           <th>#</th>
           <th>Nome</th>
-          <th>Curso</th>
           <th>Instituição</th>
-          <th>Professor</th>
+          <th>Curso</th>
+          <th>Professor</th> 
         </thead>
         <tbody>
-          <tr>
-            <td>1</td>
-            <td>Comunicação e Expressão</td>
-            <td>Sistemas de Informação</td>
-            <td>UNIFEI</td>
-            <td>Cynthia</td>
-          </tr>
-          <tr>
-            <td>2</td>
-            <td>Algortimo e Estruturas de Dados I</td>
-            <td>Sistemas de Informação</td>
-            <td>UNIFEI</td>
-            <td>Paula</td>
-          </tr>
-          <tr>
-            <td>3</td>
-            <td>Cálculo I</td>
-            <td>Sistemas de Informação</td>
-            <td>UNIFEI</td>
-            <td>Anderson</td>
-          </tr>    
+          <?php
+            $conn= new PDO("pgsql:host=localhost;port=5432;dbname=bd_saap;user=postgres;password=root");
+            $stmt = $conn->prepare("SELECT * FROM tb_turma");
+            $stmt->execute();
+            $tableData = $stmt->fetchAll(PDO::FETCH_ASSOC);
+            foreach($tableData as $line){
+              echo'<tr>';
+                echo'<td>'. $line["id_turma"] .'</td>';
+                echo'<td>'. $line["nome_turma"] .'</td>';
+                echo'<td>'. $line['curso_turma']. '</td>';
+                echo'<td>'. $line['instituicao_turma'] .'</td>';
+                echo'<td>'. $line['professor_turma']. '</td>';
+              echo'<tr>';
+            }
+            $conn = null;
+          ?>    
         </tbody>
       </table>
     </div>
