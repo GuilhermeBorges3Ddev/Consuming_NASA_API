@@ -82,12 +82,6 @@
         $conn= new PDO("pgsql:host=localhost;port=5432;dbname=bd_saap;user=postgres;password=root");
         $stmt = $conn->prepare("SELECT * FROM tb_aluno");
         $stmt->execute();
-        while($line = $stmt->fetchAll(PDO::FETCH_ASSOC)){
-          echo '<pre>';
-          print_r($line);
-          echo '</pre>';
-        }
-        $conn = null;
       ?>
       <!-- 
         ************************************************************************************ 
@@ -104,24 +98,18 @@
           <th>E-mail</th>
         </thead>
         <tbody>
-          <tr>
-            <td>1</td>
-            <td>1000</td>
-            <td>Maria</td>
-            <td>m@m.com</td>
-          </tr>
-          <tr>
-            <td>2</td>
-            <td>2000</td>
-            <td>Carlos</td>
-            <td>c@m.com</td>
-          </tr>
-          <tr>
-            <td>3</td>
-            <td>3000</td>
-            <td>Julia</td>
-            <td>j@m.com</td>
-          </tr>    
+          <?php
+            $tableData = $stmt->fetchAll(PDO::FETCH_ASSOC);
+            foreach($tableData as $line){
+              echo'<tr>';
+                echo'<td>'. $line["id_aluno"] .'</td>';
+                echo'<td>'. $line["cod_aluno"] .'</td>';
+                echo'<td>'. $line['nome_aluno']. '</td>';
+                echo'<td>'. $line['email_aluno'] .'</td>';
+              echo'<tr>';
+            }
+            $conn = null;
+          ?>    
         </tbody>
       </table>
     </div>
