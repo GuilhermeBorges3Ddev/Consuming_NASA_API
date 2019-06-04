@@ -80,29 +80,28 @@
       <table class="table table-striped border-dark text-white text-center bg-primary mt-5">
         <thead>
           <th>#</th>
+          <th>Prova</th>
           <th>Pergunta</th>
           <th>Gabarito</th>
           <th>Nível</th>
         </thead>
         <tbody>
-          <tr>
-            <td>1</td>
-            <td>O que é comunicação?</td>
-            <td>É o processo em que emissor e destinatário trocam dados.</td>
-            <td>1</td>
-          </tr>
-          <tr>
-            <td>2</td>
-            <td>O que é emissor?</td>
-            <td>É o ente que emite os dados à alguém.</td>
-            <td>1</td>
-          </tr>
-          <tr>
-            <td>3</td>
-            <td>O que é destinatário?</td>
-            <td>É o ente que receberá os dados de alguém.</td>
-            <td>1</td>
-          </tr>    
+          <?php
+            $conn= new PDO("pgsql:host=localhost;port=5432;dbname=bd_saap;user=postgres;password=root");
+            $stmt = $conn->prepare("SELECT * FROM tb_questao");
+            $stmt->execute();
+            $tableData = $stmt->fetchAll(PDO::FETCH_ASSOC);
+            foreach($tableData as $line){
+              echo'<tr>';
+                echo'<td>'. $line["id_questao"] .'</td>';
+                echo'<td>'. $line["id_prova_questao"] .'</td>';
+                echo'<td>'. $line['pergunta_questao']. '</td>';
+                echo'<td>'. $line['gabarito_questao'] .'</td>';
+                echo'<td>'. $line['nivel_questao']. '</td>';
+              echo'<tr>';
+            }
+            $conn = null;
+          ?>    
         </tbody>
       </table>
     </div>
