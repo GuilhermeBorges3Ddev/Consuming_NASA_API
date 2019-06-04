@@ -86,27 +86,22 @@
           <th>Valor</th>
         </thead>
         <tbody>
-          <tr>
-            <td>1</td>
-            <td>Sistemas de Informação</td>
-            <td>Cynthia</td>
-            <td>10/10/2019</td>
-            <td>100</td>
-          </tr>
-          <tr>
-            <td>2</td>
-            <td>Sistemas de Informação</td>
-            <td>Anderson</td>
-            <td>10/05/2019</td>
-            <td>60</td>
-          </tr>
-          <tr>
-            <td>3</td>
-            <td>Sistemas de Informação</td>
-            <td>Paula</td>
-            <td>23/11/2019</td>
-            <td>60</td>
-          </tr>    
+          <?php
+            $conn= new PDO("pgsql:host=localhost;port=5432;dbname=bd_saap;user=postgres;password=root");
+            $stmt = $conn->prepare("SELECT * FROM tb_prova");
+            $stmt->execute();
+            $tableData = $stmt->fetchAll(PDO::FETCH_ASSOC);
+            foreach($tableData as $line){
+              echo'<tr>';
+                echo'<td>'. $line["id_prova"] .'</td>';
+                echo'<td>'. $line['id_turma_prova']. '</td>';
+                echo'<td>'. $line['id_professor_prova'] .'</td>';
+                echo'<td>'. $line['data_prova']. '</td>';
+                echo'<td>'. $line['valor_prova'] .'</td>';
+              echo'<tr>';
+            }
+            $conn = null;
+          ?>    
         </tbody>
       </table>
     </div>
