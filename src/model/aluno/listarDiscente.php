@@ -9,6 +9,27 @@
     <!-- CSS Proprietário -->
     <link rel="stylesheet" href="../../css/style.css">
     <title>BD2 - NASA Planets</title>
+    <!-- Google Pie Chart -->
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+      google.charts.load('current', {'packages':['corechart']});
+      google.charts.setOnLoadCallback(drawChart);
+      function drawChart() {
+        var data = google.visualization.arrayToDataTable([
+          ['Task', 'Hours per Day'],
+          ['Work',     11],
+          ['Eat',      2],
+          ['Commute',  2],
+          ['Watch TV', 2],
+          ['Sleep',    7]
+        ]);
+        var options = {
+          title: 'My Daily Activities'
+        };
+        var chart = new google.visualization.PieChart(document.getElementById('piechart'));
+        chart.draw(data, options);
+      }
+    </script>
   </head>
 
   <body>
@@ -74,14 +95,20 @@
     </div>
     </nav>
     <div class="container mt-5">
-      <h1 class="d-flex justify-content-center align-items-center text-primary">
+      <h1 class="d-flex justify-content-center align-items-center text-primary mb-3">
           Listagem de Alunos
       </h1>
+      <!-- Test of pie graph -->
+      <div class="row mx-2">
+        <div id="piechart" class="d-flex w-100 justify-content-center align-items-center" style="height: 400px;">
+      </div>
+      </div>     
       <table class="table table-striped border-dark text-white text-center bg-primary mt-5">
         <thead>
           <th>#</th>
           <th>Código</th>
           <th>Nome</th>
+          <th>Sexo</th>
           <th>E-mail</th>
         </thead>
         <tbody>
@@ -95,11 +122,12 @@
                 echo'<td>'. $line["id_aluno"] .'</td>';
                 echo'<td>'. $line["cod_aluno"] .'</td>';
                 echo'<td>'. $line['nome_aluno']. '</td>';
+                echo'<td>'. $line['sexo_aluno']. '</td>';
                 echo'<td>'. $line['email_aluno'] .'</td>';
               echo'<tr>';
             }
             $conn = null;
-          ?>    
+          ?> 
         </tbody>
       </table>
     </div>
@@ -107,6 +135,6 @@
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="../../js/jquery.js"></script>
     <script src="../../js/popper.js"></script>
-    <script src="../../js/bootstrap.js"></script>
+    <script src="../../js/bootstrap.js"></script> 
   </body>
 </html>

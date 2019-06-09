@@ -1,2 +1,7 @@
 body {
-  background: palegoldenrod !important; }
+  background: palegoldenrod !important; 
+}
+
+#piechart {
+  background: palegoldenrod !important;
+}
