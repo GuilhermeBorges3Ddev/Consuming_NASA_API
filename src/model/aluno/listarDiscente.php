@@ -12,21 +12,22 @@
     <!-- Google Pie Chart -->
     <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
     <script type="text/javascript">
-      google.charts.load('current', {'packages':['corechart']});
+      google.charts.load("current", {packages:["corechart"]});
       google.charts.setOnLoadCallback(drawChart);
       function drawChart() {
         var data = google.visualization.arrayToDataTable([
-          ['Task', 'Hours per Day'],
-          ['Work',     11],
-          ['Eat',      2],
-          ['Commute',  2],
-          ['Watch TV', 2],
-          ['Sleep',    7]
+          ['Sexo', 'Quantidade'],
+          ['Feminino (F)', 11],
+          ['Masculino (M)', 2],
+          ['Não Informado', 2]
         ]);
+
         var options = {
-          title: 'My Daily Activities'
+          title: 'Sexo dos Alunos',
+          is3D: true,
         };
-        var chart = new google.visualization.PieChart(document.getElementById('piechart'));
+
+        var chart = new google.visualization.PieChart(document.getElementById('piechart_3d'));
         chart.draw(data, options);
       }
     </script>
@@ -98,11 +99,12 @@
       <h1 class="d-flex justify-content-center align-items-center text-primary mb-3">
           Listagem de Alunos
       </h1>
+      <br />
       <!-- Test of pie graph -->
       <div class="row mx-2">
-        <div id="piechart" class="d-flex w-100 justify-content-center align-items-center" style="height: 400px;">
+        <div id="piechart_3d" class="d-flex w-100" style="height: 500px;"></div>
       </div>
-      </div>     
+          
       <table class="table table-striped border-dark text-white text-center bg-primary mt-5">
         <thead>
           <th>#</th>
