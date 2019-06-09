@@ -9,28 +9,6 @@
     <!-- CSS Proprietário -->
     <link rel="stylesheet" href="../../css/style.css">
     <title>BD2 - NASA Planets</title>
-    <!-- Google Pie Chart -->
-    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
-    <script type="text/javascript">
-      google.charts.load("current", {packages:["corechart"]});
-      google.charts.setOnLoadCallback(drawChart);
-      function drawChart() {
-        var data = google.visualization.arrayToDataTable([
-          ['Sexo', 'Quantidade'],
-          ['Feminino (F)', 11],
-          ['Masculino (M)', 2],
-          ['Não Informado', 2]
-        ]);
-
-        var options = {
-          title: 'Sexo dos Alunos',
-          is3D: true,
-        };
-
-        var chart = new google.visualization.PieChart(document.getElementById('piechart_3d'));
-        chart.draw(data, options);
-      }
-    </script>
   </head>
 
   <body>
@@ -119,6 +97,9 @@
             $stmt = $conn->prepare("SELECT * FROM tb_aluno");
             $stmt->execute();
             $tableData = $stmt->fetchAll(PDO::FETCH_ASSOC);
+            $contFeminino = 0;
+            $contMasculino = 0;
+            $contNaoInformado = 0;
             foreach($tableData as $line){
               echo'<tr>';
                 echo'<td>'. $line["id_aluno"] .'</td>';
@@ -127,6 +108,13 @@
                 echo'<td>'. $line['sexo_aluno']. '</td>';
                 echo'<td>'. $line['email_aluno'] .'</td>';
               echo'<tr>';
+              if($line['sexo_aluno'] == 'F'){
+                $contFeminino++;
+              }else if($line['sexo_aluno'] == 'M'){
+                $contMasculino++;
+              }else{
+                $contNaoInformado++;
+              }
             }
             $conn = null;
           ?> 
@@ -138,5 +126,27 @@
     <script src="../../js/jquery.js"></script>
     <script src="../../js/popper.js"></script>
     <script src="../../js/bootstrap.js"></script> 
+    <!-- Google Pie Chart -->
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+      google.charts.load("current", {packages:["corechart"]});
+      google.charts.setOnLoadCallback(drawChart);
+      function drawChart() {
+        var data = google.visualization.arrayToDataTable([
+          ['Sexo', 'Quantidade'],
+          ['Feminino (F)', <?php echo $contFeminino ?>],
+          ['Masculino (M)', <?php echo $contMasculino ?>],
+          ['Não Informado', <?php echo $contNaoInformado ?>]
+        ]);
+
+        var options = {
+          title: 'Sexo dos Alunos',
+          is3D: true,
+        };
+
+        var chart = new google.visualization.PieChart(document.getElementById('piechart_3d'));
+        chart.draw(data, options);
+      }
+    </script>
   </body>
 </html>
