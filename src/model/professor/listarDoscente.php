@@ -77,6 +77,11 @@
       <h1 class="d-flex justify-content-center text-primary">
           Listagem de Professores
       </h1>
+      <br />
+      <!-- Test of pie graph -->
+      <div class="row mx-2">
+        <div id="chart_div" class="d-flex w-100" style="height: 500px;"></div>
+      </div>
       <table class="table table-striped border-dark text-white text-center bg-primary mt-5">
         <thead>
           <th>#</th>
@@ -106,5 +111,37 @@
     <script src="../../js/jquery.js"></script>
     <script src="../../js/popper.js"></script>
     <script src="../../js/bootstrap.js"></script>
+    <!-- Google Histogram -->
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script>
+      google.charts.load('current', {packages: ['corechart', 'bar']});
+      google.charts.setOnLoadCallback(drawBarColors);
+
+      function drawBarColors() {
+        var data = google.visualization.arrayToDataTable([
+          ['City', 'N1', 'N2'],
+          ['Prof 1', 81, 80],
+          ['Prof 2', 37, 94],
+          ['Prof 3', 26, 96],
+          ['Prof 4', 20, 53],
+          ['Prof 5', 55, 70]
+        ]);
+
+        var options = {
+          title: 'Desempenhos das Turmas dos Professores',
+          chartArea: {width: '50%'},
+          colors: ['#b0120a', '#ffab91'],
+          hAxis: {
+            title: 'Notas',
+            minValue: 0
+          },
+          vAxis: {
+            title: 'Professores'
+          }
+        };
+        var chart = new google.visualization.BarChart(document.getElementById('chart_div'));
+        chart.draw(data, options);
+      }
+    </script>
   </body>
 </html>
